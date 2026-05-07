@@ -17,19 +17,22 @@ function changeQuantity(change) {
 
 // دالة تأكيد التبني وإظهار الرسائل
 function confirmAdoption() {
-    // إظهار نافذة التأكيد (Confirm Box)
-    let userAgreed = confirm("هل أنت متأكد من رغبتك في تبني " + quantity + " من هذه النبتة؟");
-    
-    if (userAgreed) {
-        alert("تم التبني بنجاح! شكراً لمساهمتك 🌿");
-        
-        // تحديث المخزن برمجياً في الصفحة
-        stock -= quantity;
-        document.getElementById('stock-count').innerText = stock;
-        
-        // إعادة تصفير الاختيار إلى 1
-        quantity = 1;
-        document.getElementById('chosen-quantity').innerText = quantity;
+    const quantity = parseInt(document.getElementById('chosen-quantity').innerText);
+    const stockElement = document.getElementById('stock-count');
+    let currentStock = parseInt(stockElement.innerText);
+
+    if (currentStock >= quantity) {
+        // 1. تنقيص المخزون
+        currentStock -= quantity;
+        stockElement.innerText = currentStock;
+
+        // 2. إظهار تنبيه بسيط (اختياري)
+        alert("تم تسجيل طلبكم بنجاح!");
+
+        // 3. الانتقال لصفحة الشكر (هذا هو سطر الربط)
+        window.location.href = "thank.html"; 
+    } else {
+        alert("عذراً، الكمية المطلوبة غير متوفرة في المخزون حالياً.");
     }
 }
 
