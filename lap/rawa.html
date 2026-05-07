@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مشروع رواء - الرئيسية</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="rawa.css">
+</head>
+<body>
+
+    <nav class="top-nav">
+        <ul>
+            <li><a href="#">الرئيسية</a></li>
+            <li><a href="#">من نحن</a></li>
+            <li><a href="#">الدعم</a></li>
+            <li><a href="login.html">تسجيل الدخول</a></li>
+            
+        </ul>
+    </nav>
+
+    <header class="hero-section">
+        <div class="search-container">
+            <input type="text" id="plantsSearch" placeholder="ابحث عن نباتك القادم..." class="search-bar" list="plants-list" >
+            <datalist id="plants-list">
+                <option value="البوتس"></option>
+                <option value="الصبار"></option>
+                <option value="الياسمين"></option>
+                <option value="اللافندر"></option>
+                <option value="النعناع"></option>
+                <option value="المونستيرا"></option>
+            </datalist>
+
+            <button class="search-btn" onclick="goToPlantPage()">🔍</button>
+        </div>
+    </header>
+    <p class="nav-links">
+  <a href="#flowers">🪴 النباتات المزهرة</a>
+  <a href="#home">☘️ النباتات المنزلية</a>
+  <a href="#special">🍃 نباتات مميزة</a>
+  <a href="#indoor">🌸 نباتات داخلية</a>
+</p>
+
+   
+    <h2 id="home">☘️ النباتات المنزلية</h2>
+
+<div class="plants-container">
+
+  <div class="card">
+    <h3><a href="pothos.html" class="link-pothos">البوتس</a></h3>
+    <img src="https://sultangardencenter.com/image/cache/catalog/product/5499/BND-SC808-13MS-(3)-5499-thumb-800x533.jpg" alt="بوتس">
+    <p>نبتة تضيف الحياة للمكان</p>
+    <p id="s3">✅ تم تبنّيها</p>
+    <button onclick="document.getElementById('s3').innerHTML='تم التبني ✅'">تبنّي</button>
+  </div>
+
+  <div class="card">
+    <h3><a href="cactus.html" class="link-cactus">الصبار</a></h3>
+    <img src="https://blog.nv.sa/sites/default/files/styles/xlarge/public/field/image/%D8%B5%D8%A8%D8%A7%D8%B11.jpg?itok=j5qCJLPJ&c=4e7a61ae3e058f7300f4b1fc0ecb8942" alt="صبار">
+    <p>نبتة قوية تتحمل الظروف</p>
+    <p id="s4">🌿 متاحة</p>
+    <button onclick="document.getElementById('s4').innerHTML='تم التبني ✅'">تبنّي</button>
+  </div>
+
+</div>
+
+<h2 id="special">🍃 نباتات مميزة</h2>
+
+<div class="plants-container">
+
+  <div class="card">
+    <h3><a href="lavender.html" class="link-lavender">اللافندر</a></h3>
+    <img src="https://landgreen.com.eg/wp-content/uploads/2024/10/%D8%A8%D8%B0%D9%88%D8%B1-%D9%84%D8%A7%D9%81%D9%86%D8%AF%D8%B1-300x300.jpeg" alt="لافندر">
+    <p>نبتة مريحة</p>
+    <p id="s5">⚠️ تحتاج عناية</p>
+    <button onclick="document.getElementById('s5').innerHTML='تم التبني ✅'">تبنّي</button>
+  </div>
+
+  <div class="card">
+    <h3><a href="mint.html" class="link-mint">النعناع</a></h3>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI-fEHbguXchO9GQo9llXpS66TChmMf0MY9G-RHTSNC920hh80dNQyh_Y&s=10" alt="نعناع">
+    <p>نبتة منعشة</p>
+    <p id="s6">🌿 متاحة</p>
+    <button onclick="document.getElementById('s6').innerHTML='تم التبني ✅'">تبنّي</button>
+  </div>
+
+</div>
+
+<h2 id="indoor">🌸 نباتات داخلية</h2>
+
+<div class="plants-container">
+
+  <div class="card">
+    <h3><a href="ficus.html" class="link-ficus">الفيكس</a></h3>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPymtUkl4_Qq6sWRYehIuKT-dRayVibHU_cLucPLrUNtQdznDtTdj-e57k&s=10" alt="فيكس">
+    <p>نبتة أنيقة</p>
+    <p id="s7">🪴 تحت العناية</p>
+    <button onclick="document.getElementById('s7').innerHTML='تم التبني ✅'">تبنّي</button>
+  </div>
+
+  <div class="card">
+    <h3><a href="monstera.html" class="link-monstera">المونستيرا</a></h3>
+    <img src="https://albustan.com.sa/wp-content/uploads/2025/05/IDR-000280-jpg.webp" alt="مونستيرا">
+    <p>نبتة مميزة</p>
+    <p id="s8">🌿 متاحة</p>
+    <button onclick="document.getElementById('s8').innerHTML='تم التبني ✅'">تبنّي</button>
+  </div>
+
+</div>
+
+<footer class="main-footer">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>روابط مساعدة</h3>
+            <ul class="footer-links">
+                <li><a href="faq.html" style="color: aliceblue;">الأسئلة الشائعة</a></li>
+                <li><a href="about.html" style="color: aliceblue;">من نحن</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>الموقع</h3>
+            <p>📍 الطائف</p>
+        </div>
+
+        <div class="footer-section">
+            <h3>تواصل معنا</h3>
+            <div class="social-links">
+                <a href="#">Instagram 📸</a>
+                <br>
+                <a href="mailto:info@rawa.com">Contact Us ✉️</a>
+            </div>
+        </div>
+
+        <div class="footer-section">
+            <h3>رواء 🌿</h3>
+            <p>نحو بيئة خضراء مستدامة. الطائف، المملكة العربية السعودية.</p>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        &copy; 2026 مشروع رواء | جميع الحقوق محفوظة
+    </div>
+</footer>
+
+<script src="javascript.js"></script>
+
+
+</body>
+</html>

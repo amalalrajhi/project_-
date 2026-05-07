@@ -1,0 +1,386 @@
+
+/* تنسيقات عامة */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* البار الرمادي العلوي */
+.top-nav {
+    background-color: #f4f4f4; /* رمادي فاتح */
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.top-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.top-nav li {
+    margin: 0 20px;
+}
+
+.top-nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.top-nav a:hover {
+    color: #5d8a66; /* لون أخضر عند التمرير */
+}
+
+/* قسم الهيدر (الصورة) */
+.hero-section {
+    background-image: url('WhatsApp Image 2026-05-06 at 11.23.12 PM.jpeg'); /* تأكدي أن اسم الصورة مطابق للملف عندك */
+    background-size: cover;
+    background-position: center;
+    height: 300px; /* يمكنك تعديل الطول حسب الرغبة */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* لجعل البحث في أعلى الصورة */
+    padding-top: 30px;
+}
+
+/* شريط البحث */
+.search-container {
+    display: flex;
+    width: 60%; /* طول شريط البحث */
+    background: rgba(255, 255, 255, 0.9); /* خلفية بيضاء شفافة قليلاً */
+    border-radius: 25px;
+    padding: 5px 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.search-bar {
+    width: 100%;
+    border: none;
+    padding: 12px;
+    outline: none;
+    background: transparent;
+    font-size: 16px;
+}
+
+.search-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+h2 {
+  margin: 40px 0 20px;
+  color: #3e4e3e;
+}
+
+/* الكونتينر بالنص */
+.plants-container {
+  display: grid;
+  grid-template-columns: repeat(2, 300px); /* زي الشكل اللي عندك */
+  justify-content: center; /* أهم شي للتوسيط */
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+/* الكروت */
+.card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* الصور */
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* النص */
+.card h3 {
+  color: #2f3e2f;
+}
+
+.card p {
+  color: #666;
+}
+
+/* الزر */
+button {
+  background: #5a6d4f;
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 20px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #3e4e3e;
+}
+/* روابط القائمة */
+.nav-links a {
+    text-decoration: none;
+    color: #444;
+    margin: 0 10px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* عند التأشير (Hover) */
+.nav-links a:hover {
+    color: #1b5e20; /* أخضر غامق */
+}
+
+/* اختيارياً: لما تضغطي عليها */
+.nav-links a:active {
+    color: #0d3b12;
+}
+/* تنسيق البطاقة البيضاء */
+.plant-details-card {
+    background-color: white;
+    max-width: 700px;
+    margin: 50px auto; /* لتوسيط البطاقة في نص الصفحة */
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    direction: rtl; /* عشان التنسيق العربي يضبط */
+}
+
+/* تنسيق زر الرجوع ليكون أرقى من الشكل الافتراضي */
+.back-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    color: #333;
+    text-decoration: none;
+    border-radius: 10px;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    background-color: #e0e0e0;
+}
+
+/* تنسيق القائمة */
+ul {
+    list-style-position: inside;
+    padding-right: 0;
+}
+/* تنسيق زر الرجوع  */
+.back-btn {
+    background: rgba(255, 255, 255, 0.1); /* خلفية شفافة */
+    color: #2e4d2e;           /* لون الخط أخضر  */
+    padding: 12px 30px;
+    border: 2px solid #2e4d2e; /* إطار    */
+    border-radius: 12px;       /* حواف    */
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;          /* لإخفاء تأثير الضوء الخارج عن الحدود */
+    transition: all 0.4s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;                 /* مسافة بين النص والسهم */
+    text-decoration: none;
+}
+
+/* تأثير عند مرور الماوس */
+.back-btn:hover {
+    background: #2e4d2e;      /* ينعكس اللون ويصبح الأخضر هو الخلفية */
+    color: white;             /* النص يصير أبيض */
+    box-shadow: 0 0 20px rgba(46, 77, 46, 0.4); /* توهج أخضر خفيف */
+    transform: scale(1.05);    /* تكبير بسيط جداً    */
+}
+
+/* إضافة تأثير السهم المتحرك */
+.back-btn::after {
+    content: '';
+    transition: transform 0.3s ease;
+}
+
+.back-btn:hover::after {
+    transform: translateX(-5px); /* السهم يتحرك لليسار لما نأشر عليه */
+}
+/* --- تنسيق زر الرجوع  --- */
+.back-btn {
+    /* سوينا الخلفية شفافه */
+    background: rgba(255, 255, 255, 0.1); 
+    color: #2e4d2e;           /* لون الخط أخضر متناسق مع الثيم */
+    padding: 12px 30px;       /* عطينا مساحة للزر */
+    border: 2px solid #2e4d2e; /* إطار يحدد شكل الزر */
+    border-radius: 12px;       /* زوايا منحنية  */
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;           /*هذا يغير شكل المؤشر لازم نغيره عشان مؤشر الورقه */
+    position: relative;
+    overflow: hidden;         
+    transition: all 0.4s ease; 
+    display: inline-flex;
+    align-items: center;       /* يوسط النص والسهم عمودياً */
+    gap: 10px;                 /* يخلي فيه مسافة ثابتة بين كلمة رجوع والسهم */
+    text-decoration: none;     /* يشيل الخط اللي يجي تحت الروابط  */
+}
+
+/* --- تأثير الزر عند تمرير الماوس (Hover) --- */
+.back-btn:hover {
+    /* هنا قلبنا الألوان: الخلفية تصير خضراء والنص يصير أبيض */
+    background: #2e4d2e;      
+    color: white;             
+    box-shadow: 0 0 20px rgba(46, 77, 46, 0.4); 
+    /* الزر يكبر شي بسيط (5%)  */
+    transform: scale(1.05);    
+}
+
+/* --- إضافة السهم برمجياً (Before/After) --- */
+.back-btn::after {
+    transition: transform 0.3s ease; 
+}
+/* --- حركة السهم عند تمرير الماوس --- */
+.back-btn:hover::after {
+    transform: translateX(-5px); 
+}
+/* تنسيق عام لكل روابط الأسماء في الكروت */
+.card h3 a {
+    text-decoration: none; /* يشيل الخط */
+    transition: 0.3s;      /* نعومة في تغيير اللون */
+}
+
+/* تخصيص الألوان لكل نبتة */
+.link-jasmine { color: #d4af37; } /* ذهبي/أصفر */
+.link-tulip { color: #d62828; }   /* أحمر */
+.link-pothos { color: #2d6a4f; }  /* أخضر غامق */
+.link-cactus { color: #4b6a4a; }  /* أخضر زيتوني */
+.link-lavender { color: #8e44ad; } /* بنفسجي */
+.link-mint { color: #52b788; }     /* أخضر فاتح منعش */
+.link-ficus { color: #1b4332; }    /* أخضر غابة داكن */
+.link-monstera { color: #081c15; } /* أخضر مسود */
+
+/* تأثير عند التأشير (Hover) - يفتح اللون شوي */
+.card h3 a:hover {
+    filter: brightness(1.3);
+}
+
+.adoption-container {
+    background-color: #ffffff;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border: 1px solid #e0dcd6;
+}
+
+.quantity-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.quantity-controls button {
+    background: #f3efe9;
+    color: #3e4e3e;
+    border: 1px solid #3e4e3e;
+    width: 35px;
+    height: 35px;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.quantity-controls button:hover {
+    background: #3e4e3e;
+    color: white;
+}
+
+#chosen-quantity {
+    font-size: 22px;
+    font-weight: bold;
+    color: #2f3e2f;
+}
+
+.confirm-btn {
+    background: #5a6d4f;
+    color: white;
+    border: none;
+    padding: 12px 40px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.4s ease;
+    width: 80%;
+}
+
+.confirm-btn:hover {
+    background: #3e4e3e;
+    transform: scale(1.03);
+}
+
+
+.main-footer {
+    background-color: #2d5a27; /* اللون الأخضر الخاص برواء */
+    color: white;
+    padding: 30px 10px;
+    text-align: center;
+    direction: rtl;
+    margin-top: 40px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    margin-bottom: 20px;
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-section h3 {
+    border-bottom: 2px solid #76a871;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.social-links a {
+    color: #e1eee0;
+    text-decoration: none;
+    line-height: 2;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 0.8em;
+    border-top: 1px solid #4a7c44;
+    padding-top: 15px;
+}

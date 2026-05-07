@@ -1,0 +1,130 @@
+
+<!-- الصفحة الثامنة: صفحة تفاصيل نبتة الفيكس -->
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>الفيكس 🪴</title>
+
+  
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Cairo', sans-serif;
+      background-color: #dcd6d1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .card {
+      background: #f5f5f5;
+      width: 650px;
+      padding: 40px 60px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #222;
+    }
+
+    p {
+      color: #444;
+      line-height: 2;
+      margin: 8px 0;
+      font-size: 15px;
+    }
+
+    strong {
+      color: #222;
+    }
+
+    ul {
+      list-style: disc;
+      text-align: right;
+      margin: 10px auto;
+      width: fit-content;
+      padding-right: 20px;
+    }
+
+    li {
+      margin: 6px 0;
+    }
+
+    button {
+      margin-top: 25px;
+      padding: 10px 35px;
+      border-radius: 12px;
+      border: 2px solid #3c5f3c;
+      background: transparent;
+      color: #3c5f3c;
+      font-family: 'Cairo', sans-serif;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #3c5f3c;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+
+<div id="header-placeholder"></div>
+<div class="card">
+  <h1>🪴 نبتة: الفيكس</h1>
+
+  <p><strong>الوصف:</strong> نبتة أنيقة تضيف لمسة فخامة للمكان، بأوراقها الكبيرة واللامعة.</p>
+
+  <p><strong>مستوى العناية:</strong> متوسط ⭐⭐</p>
+
+  <p><strong>العناية:</strong> عند جفاف سطح التربة</p>
+
+  <p><strong>الإضاءة:</strong> ضوء غير مباشر</p>
+
+  <p><strong>مميزات النبتة:</strong></p>
+
+  <ul>
+    <li>شكل فاخر وجذاب</li>
+    <li>مناسبة للبيوت والمكاتب</li>
+    <li>تعيش لفترة طويلة</li>
+  </ul>
+
+  <p><strong>ملاحظة من "رواء":</strong> تغيير مكانها كثير ممكن يسبب تساقط الأوراق 🪴</p>
+
+  <div class="adoption-container">
+    <p>المخزون المتاح: <span id="stock-count">10</span></p>
+    
+    <div class="quantity-controls">
+        <button type="button" onclick="changeQuantity(-1)">-</button>
+        <span id="chosen-quantity">1</span>
+        <button type="button" onclick="changeQuantity(1)">+</button>
+    </div>
+
+    <button type="button" class="confirm-btn" onclick="confirmAdoption()">تأكيد التبني</button>
+</div>
+
+  <a href="index.html">
+    <button>  رجوع</button>
+  </a>
+</div>
+
+<div id="footer-placeholder"></div>
+</body>
+
+
+
+
+</html>
+
+
+<script src="javascript.js"></script>
