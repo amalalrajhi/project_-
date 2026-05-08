@@ -1,26 +1,134 @@
 <!DOCTYPE html>
-<html>
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="utf-8">
-  <title>تسجيل الدخول</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تسجيل الدخول - رواء</title>
+  <style>
+    /* الخطوط والخلفية */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9fbf9; /* خلفية فاتحة جداً مريحة */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    /* حاوية النموذج */
+    .login-container {
+      background-color: #ffffff;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+      border-top: 5px solid #2d6a4f; /* اللون الأخضر من الصورة */
+    }
+
+    h2 {
+      color: #2d6a4f;
+      margin-bottom: 30px;
+      font-size: 24px;
+    }
+
+    /* تنسيق المدخلات */
+    .input-group {
+      margin-bottom: 20px;
+      text-align: right;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      color: #4a4a4a;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 12px 15px;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      box-sizing: border-box; /* لضمان عدم خروج الحواف */
+      transition: all 0.3s ease;
+      background-color: #fcfcfc;
+      font-size: 16px;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: #2d6a4f;
+      box-shadow: 0 0 5px rgba(45, 106, 79, 0.2);
+      background-color: #fff;
+    }
+
+    /* تنسيق الزر (بنفس شكل زر العودة للرئيسية) */
+    input[type="submit"] {
+      background-color: #2d6a4f;
+      color: white;
+      padding: 12px 40px;
+      border: none;
+      border-radius: 25px; /* زوايا دائرية مثل الصورة */
+      cursor: pointer;
+      font-size: 18px;
+      font-weight: bold;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #1b4332;
+      transform: translateY(-2px);
+    }
+
+    input[type="submit"]:active {
+      transform: translateY(0);
+    }
+
+    /* رابط إضافي تحت الزر */
+    .footer-link {
+      margin-top: 20px;
+      font-size: 13px;
+      color: #888;
+    }
+    
+    .footer-link a {
+      color: #2d6a4f;
+      text-decoration: none;
+    }
+  </style>
 </head>
 
 <body>
 
-<form method="get">
-
-  <label for="email">Email:</label>
-  <input type="text" name="email" placeholder="Email" id="email">
-
-  <br><br>
-
-  <label for="password">Password:</label>
-  <input type="password" name="password" placeholder="Password" id="password">
-
-  <br><br>
+<div class="login-container">
+  <h2>تسجيل الدخول</h2>
   
-  <input type="submit" value="Login">
+  <form method="get">
+    <div class="input-group">
+      <label for="email">البريد الإلكتروني</label>
+      <input type="text" name="email" placeholder="example@mail.com" id="email" required>
+    </div>
 
-</form>
+    <div class="input-group">
+      <label for="password">كلمة المرور</label>
+      <input type="password" name="password" placeholder="••••••••" id="password" required>
+    </div>
+    
+    <input type="submit" value="دخول">
+  </form>
+
+  <div class="footer-link">
+    ليس لديك حساب؟ <a href="#">إنشاء حساب جديد</a>
+  </div>
+</div>
+
 </body>
+</html>
 </html>
