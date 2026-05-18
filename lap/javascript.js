@@ -71,3 +71,74 @@ document.addEventListener("DOMContentLoaded", function() {
             document.getElementById('footer-placeholder').innerHTML = data;
         });
 });
+// صحة البيانات
+
+function setupFormValidation() {
+    const form = document.querySelector('form');
+    const nameInput = document.getElementsByName('name')[0];
+    const emailInput = document.getElementsByName('email')[0];
+    const passwordInput = document.getElementsByName('password')[0];
+    
+    if (form && nameInput && emailInput && passwordInput) {
+        emailInput.type = "text";
+
+        const nameError = document.createElement('span');
+        const emailError = document.createElement('span');
+        const passwordError = document.createElement('span');
+        
+        [nameError, emailError, passwordError].forEach(span => {
+            span.style.color = "#d90429";
+            span.style.fontSize = "13px";
+            span.style.display = "block";
+            span.style.marginTop = "5px";
+            span.style.fontWeight = "bold";
+            span.style.textAlign = "right";
+        });
+        
+        nameInput.parentNode.appendChild(nameError);
+        emailInput.parentNode.appendChild(emailError);
+        passwordInput.parentNode.appendChild(passwordError);
+        
+        form.addEventListener('submit', function(event) {
+            let nameValue = nameInput.value.trim();
+            let emailValue = emailInput.value.trim();
+            let passwordValue = passwordInput.value.trim();
+            
+            nameError.innerText = "";
+            emailError.innerText = "";
+            passwordError.innerText = "";
+            
+            let isValid = true;
+            
+            if (nameValue === "") {
+                nameError.innerText = "⚠️ حقل الاسم مطلوب ولا يمكن تركه فارغاً.";
+                isValid = false;
+            }
+            
+            if (emailValue === "") {
+                emailError.innerText = "⚠️ حقل البريد الإلكتروني مطلوب.";
+                isValid = false;
+            } else if (!emailValue.includes('@') || !emailValue.includes('.')) {
+                emailError.innerText = "⚠️ صيغة البريد غير صحيحة (يجب أن يحتوي على @ و .)";
+                isValid = false;
+            }
+            
+            if (passwordValue === "") {
+                passwordError.innerText = "⚠️ حقل كلمة المرور مطلوب.";
+                isValid = false;
+            } else if (passwordValue.length < 6) {
+                passwordError.innerText = "⚠️ كلمة المرور يجب ألا تقل عن 6 خانات.";
+                isValid = false;
+            }
+            
+            if (!isValid) {
+                event.preventDefault();
+                alert("يرجى تصحيح الأخطاء الحمراء أولاً.");
+            }
+        });
+    }
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    setupFormValidation();
+});
