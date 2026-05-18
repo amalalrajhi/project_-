@@ -124,11 +124,43 @@
     <input type="submit" value="دخول">
   </form>
 
-  <div class="footer-link">
-    ليس لديك حساب؟ <a href="#">إنشاء حساب جديد</a>
-  </div>
+<div class="footer-link">
+  ليس لديك حساب؟ <a href="javascript:void(0)" onclick="showRegister()">
+  إنشاء حساب جديد
+</a>
+
+<!-- نموذج إنشاء الحساب -->
+<div id="register-form" style="display:none; margin-top:30px;">
+
+  <h2>إنشاء حساب جديد</h2>
+
+  <form method="get">
+
+    <div class="input-group">
+      <label for="name">الاسم الكامل</label>
+      <input type="text" id="name" name="name" placeholder="اكتب اسمك" required>
+    </div>
+
+    <div class="input-group">
+      <label for="new-email">البريد الإلكتروني</label>
+      <input type="text" id="new-email" name="new-email" placeholder="example@mail.com" required>
+    </div>
+
+    <div class="input-group">
+      <label for="new-password">كلمة المرور</label>
+      <input type="password" id="new-password" name="new-password" placeholder="••••••••" required>
+    </div>
+
+    <input type="submit" value="إنشاء الحساب">
+
+  </form>
 </div>
 
+<script>
+function showRegister() {
+  document.getElementById("register-form").style.display = "block";
+}
+</script>
+
 </body>
-</html>
 </html>
